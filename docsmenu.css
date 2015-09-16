@@ -1,0 +1,56 @@
+
+/**********************************************/
+/* Dropdown menu for version number selection */
+/**********************************************/
+
+#versionmenu-container {
+    float:right;
+    margin-right: 17px;
+    margin-top:-22px;
+}
+
+ul.major-menu {
+    margin:0;
+    padding:3;
+    font-weight: bold;
+    display:inline-block;
+    list-style-type:none;
+    font:14px Helvetica, Calibri, Arial, sans-serif;
+}
+
+ul.major-menu > li {
+    position:relative;
+    list-style-type:none;
+    float:left;
+}
+
+
+ul.major-menu > li:hover {
+    background-color:#0CF;	
+    display: block;
+}
+
+ul.specific-version {
+    position:absolute;
+    visibility:hidden;
+    border-top:1px solid #fff;
+    top:100%;
+    margin:0;
+    padding:0;
+    white-space: nowrap;
+}
+
+.specific-version > li {
+    display:inline;
+    float:none;
+    list-style:none;
+    font:12px Arial, Helvetica, sans-serif #111;
+    position:absolute;
+
+}
+
+.specific-version > li:hover {
+    background-color:#0CF;	
+    display: block;
+}
+
