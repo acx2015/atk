@@ -37,6 +37,17 @@ fi
 
 cp -v ../conf/examples/application.conf.tpl ${BUILD_DIR}/etc/trustedanalytics/rest-server
 cp -v ../conf/examples/parcel.conf.tpl      ${BUILD_DIR}/etc/trustedanalytics/rest-server
+mkdir -p ${BUILD_DIR}/etc/trustedanalytics/rest-server/configfiles
+cat > ${BUILD_DIR}/etc/trustedanalytics/rest-server/atk.conf <<EOF
+############################################################################
+############  AUTOMATICALLY GENERATED FILE.  DO NOT EDIT!!!!  ##############
+#########  ATK user-configured settings should go in "user.conf" ###########
+############################################################################
+include "config-files/generated.conf"
+include "config-files/cdh.conf"
+include "config-files/db.conf"
+include "config-files/user.conf"
+EOF
 cp -v ../conf/examples/application.conf.single-system.tpl ${BUILD_DIR}/etc/trustedanalytics/rest-server
 
 pushd $SCRIPTPATH
